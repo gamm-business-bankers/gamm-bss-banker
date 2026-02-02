@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dark: #201E1D;
+    --gold: #c5a13f;
+    --gold-soft: #ebc979;
+    --light-bg: #f5f4f1;
+    --light-card: #ffffff;
+    --text-dark: #1b1b1b;
+    --text-muted: #6b6b6b;
+}
+
+.gold-gradient {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+}
+
+.transition-smooth {
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.2px;
+    color: var(--text-dark);
+    background: var(--light-bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scrollbar-gutter: stable;
+}
+
+.font-heading {
+    font-family: "Geist", sans-serif;
+    letter-spacing: 1.2px;
+}
+
+.bebas {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.nav-link {
+    font-weight: 500;
+    letter-spacing: 0.6px;
+}
+
+.hero-title {
+    letter-spacing: 0.06em;
+    line-height: 0.95;
+}
+
+.eyebrow {
+    letter-spacing: 0.28em;
+}
+
+.soft-divider {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.12), rgba(255,255,255,0));
+}
+
+.section {
+    padding: 64px 0;
+}
+
+.section-title {
+    font-family: "Geist", sans-serif;
+    letter-spacing: 0.04em;
+}
+
+.card {
+    background: var(--light-card);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.input-field {
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.12);
+    padding: 10px 14px;
+    background: #fff;
+    color: var(--text-dark);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.input-field::placeholder {
+    color: rgba(0,0,0,0.4);
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(197,161,63,0.2);
+}

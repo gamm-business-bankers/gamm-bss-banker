@@ -1,0 +1,25 @@
+<div id="info-modal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50 px-6">
+    <div class="bg-white text-[var(--text-dark)] w-full max-w-lg rounded-2xl p-6 relative">
+        <div class="flex items-center justify-between">
+            <h3 class="section-title text-xl mt-2">Cadastre seu contato</h3>
+            <button id="close-modal" class="text-black/50 hover:text-black" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <p class="text-sm text-muted mt-2">Preencha seus dados e nossa equipe retornará o mais rápido possível.</p>
+
+        <form class="mt-6 space-y-4">
+            <div>
+                <label class="text-xs text-muted">E-mail</label>
+                <input type="email" placeholder="seuemail@empresa.com" class="input-field">
+            </div>
+            <div class="pb-6">
+                <label class="text-xs text-muted">Telefone</label>
+                <input id="phone-input" type="tel" placeholder="(00) 00000-0000" class="input-field" inputmode="numeric" autocomplete="tel">
+            </div>
+            <button type="button" class="w-full inline-flex justify-center text-dark-gray focus:outline-none px-5 py-2 rounded-full gold-gradient transition-smooth hover:brightness-110">
+                Enviar contato
+            </button>
+        </form>
+    </div>
+</div>
