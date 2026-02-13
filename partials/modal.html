@@ -8,18 +8,33 @@
         </div>
         <p class="text-sm text-muted mt-2">Preencha seus dados e nossa equipe retornará o mais rápido possível.</p>
 
-        <form class="mt-6 space-y-4">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="mt-6 space-y-4">
+            <input type="hidden" name="access_key" value="33177f0e-920b-427b-9af9-45cdd88037d6">
+            <input type="hidden" name="subject" value="Novo contato do site GAMM BSS">
+            <input type="hidden" name="from_name" value="Site GAMM BSS">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+            <div>
+                <label class="text-xs text-muted">Nome</label>
+                <input type="text" name="name" placeholder="Seu nome" class="input-field" required>
+            </div>
             <div>
                 <label class="text-xs text-muted">E-mail</label>
-                <input type="email" placeholder="seuemail@empresa.com" class="input-field">
+                <input type="email" name="email" placeholder="seu@email.com" class="input-field" required>
+            </div>
+            <div>
+                <label class="text-xs text-muted">Telefone</label>
+                <input id="phone-input" type="tel" name="phone" placeholder="(00) 00000-0000" class="input-field" inputmode="numeric" autocomplete="tel" required>
             </div>
             <div class="pb-6">
-                <label class="text-xs text-muted">Telefone</label>
-                <input id="phone-input" type="tel" placeholder="(00) 00000-0000" class="input-field" inputmode="numeric" autocomplete="tel">
+                <label class="text-xs text-muted">Mensagem (opcional)</label>
+                <textarea name="message" placeholder="Deixe uma mensagem..." class="input-field resize-none" rows="3"></textarea>
             </div>
-            <button type="button" class="w-full inline-flex justify-center text-dark-gray focus:outline-none px-5 py-2 rounded-full gold-gradient transition-smooth hover:brightness-110">
-                Enviar contato
+            <button type="submit" class="w-full inline-flex justify-center text-dark-gray focus:outline-none px-5 py-2 rounded-full gold-gradient transition-smooth hover:brightness-110">
+                <span id="button-text">Enviar contato</span>
+                <span id="button-loading" class="hidden">Enviando...</span>
             </button>
+            <div id="form-message" class="hidden text-sm text-center"></div>
         </form>
     </div>
 </div>
