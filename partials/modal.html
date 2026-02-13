@@ -20,11 +20,11 @@
             </div>
             <div>
                 <label class="text-xs text-muted">E-mail</label>
-                <input type="email" name="email" placeholder="seu@email.com" class="input-field" required>
+                <input type="email" name="email" placeholder="seu@email.com" class="input-field" minlength="5" required>
             </div>
             <div>
                 <label class="text-xs text-muted">Telefone</label>
-                <input id="phone-input" type="tel" name="phone" placeholder="(00) 00000-0000" class="input-field" inputmode="numeric" autocomplete="tel" required>
+                <input id="phone-input" type="tel" name="phone" placeholder="(00) 00000-0000" class="input-field" inputmode="numeric" autocomplete="tel" minlength="8" pattern="\(\d{2}\) \d{4,5}-\d{4}" title="Digite um telefone válido com DDD" required>
             </div>
             <div class="pb-6">
                 <label class="text-xs text-muted">Mensagem (opcional)</label>

@@ -89,7 +89,16 @@ const initModal = () => {
         const formMessage = document.getElementById('form-message');
         const submitButton = contactForm.querySelector('button[type="submit"]');
 
-        // Desabilita o botão e mostra loading
+        const phoneValue = phoneInput?.value || '';
+        const phoneDigits = phoneValue.replace(/\D/g, '');
+        
+        if (phoneDigits.length < 8) {
+            formMessage.textContent = 'Por favor, digite um telefone válido com DDD (mínimo 8 dígitos).';
+            formMessage.className = 'text-sm text-center text-red-600';
+            formMessage.classList.remove('hidden');
+            return;
+        }
+
         submitButton.disabled = true;
         buttonText.classList.add('hidden');
         buttonLoading.classList.remove('hidden');
@@ -110,7 +119,6 @@ const initModal = () => {
                 formMessage.classList.remove('hidden');
                 contactForm.reset();
                 
-                // Fecha o modal após 2 segundos
                 setTimeout(() => {
                     infoModal.classList.add('hidden');
                     infoModal.classList.remove('flex');
