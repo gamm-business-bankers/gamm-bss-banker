@@ -1,18 +1,33 @@
 <header class="relative overflow-hidden bg-[var(--dark)] text-white">
-    <nav class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between border-b border-white/10 relative z-10">
-        <div class="flex items-center gap-3">
-            <img class="h-8" src="images/logo_gamm_alpha_alt.png" alt="Gamm Business Bankers">
-        </div>
+    <nav class="fixed top-0 left-0 right-0 bg-[var(--dark)] border-b border-white/10 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img class="h-8" src="images/logo_gamm_alpha_alt.png" alt="Gamm Business Bankers">
+            </div>
 
-        <div class="flex items-center gap-8 text-sm">
-            <a href="#" class="nav-link hover:text-gold transition-smooth">Início</a>
-            <a href="#servicos" class="nav-link hover:text-gold transition-smooth">Serviços</a>
-            <a href="#sobre" class="nav-link hover:text-gold transition-smooth">Sobre Nós</a>
-            <a href="#contato" class="nav-link hover:text-gold transition-smooth">Contato</a>
+            <div class="hidden md:flex items-center gap-8 text-sm">
+                <a href="#" class="nav-link hover:text-gold transition-smooth">Início</a>
+                <a href="#servicos" class="nav-link hover:text-gold transition-smooth">Serviços</a>
+                <a href="#sobre" class="nav-link hover:text-gold transition-smooth">Sobre Nós</a>
+                <a href="#contato" class="nav-link hover:text-gold transition-smooth">Contato</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
         </div>
     </nav>
 
-    <div class="max-w-6xl mx-auto px-6 pt-10 pb-16 relative z-10">
+    <div id="mobile-menu" class="fixed top-[73px] left-0 right-0 hidden md:hidden bg-[var(--dark)] border-b border-white/10 z-40">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
+            <a href="#" class="mobile-menu-link text-sm hover:text-gold transition-smooth py-2">Início</a>
+            <a href="#servicos" class="mobile-menu-link text-sm hover:text-gold transition-smooth py-2">Serviços</a>
+            <a href="#sobre" class="mobile-menu-link text-sm hover:text-gold transition-smooth py-2">Sobre Nós</a>
+            <a href="#contato" class="mobile-menu-link text-sm hover:text-gold transition-smooth py-2">Contato</a>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 pt-32 pb-16 relative z-10">
         <div class="flex flex-col gap-4 max-w-2xl">
             <h1 class="bebas text-5xl md:text-6xl text-[var(--gold)] hero-title">
                 GAMM BUSINESS BANKERS
